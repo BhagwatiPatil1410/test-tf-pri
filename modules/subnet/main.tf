@@ -10,7 +10,7 @@ resource "aws_subnet" "private" {
 resource "aws_subnet" "public" {
   vpc_id                  = var.vpc_id
   cidr_block              = var.pub_sub_cidr
-  map_public_ip_on_launch = true
+  map_public_ip_on_launch = false
 
   tags = {
     Name = "${var.project}-public-subnet"
